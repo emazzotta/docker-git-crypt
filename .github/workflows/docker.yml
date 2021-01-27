@@ -16,8 +16,6 @@ jobs:
           echo "VCS_REF=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
           echo "BUILD_DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")" >> $GITHUB_ENV
           echo "VERSION=latest" >> $GITHUB_ENV
-          echo "Values:"
-          cat ${GITHUB_ENV}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1

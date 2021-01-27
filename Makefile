@@ -10,12 +10,12 @@ all: build
 
 .PHONY: build
 build:
-	@export IMAGE_NAME=emazzotta/docker-git-crypt && hooks/build
+	@docker build \
+         --build-arg VCS_REF=$(git rev-parse --short HEAD) \
+         --build-arg BUILD_DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ") \
+         --build-arg VERSION=latest \
+         -t emazzotta/docker-git-crypt .
 
 .PHONY: push
 push:
 	@docker push emazzotta/docker-git-crypt
-
-.PHONY: run
-run:
-	@docker run --rm emazzotta/docker-git-crypt

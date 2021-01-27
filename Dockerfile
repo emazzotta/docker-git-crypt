@@ -17,6 +17,7 @@ LABEL maintainer="hello@mazzotta.me" \
 
 RUN apk --update add \
    git-crypt \
+   gnupg \
    && rm -rf /var/cache/apk/*
 
 ENTRYPOINT ["git-crypt"]

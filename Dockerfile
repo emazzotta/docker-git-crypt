@@ -15,7 +15,7 @@ LABEL maintainer="hello@mazzotta.me" \
     org.label-schema.version=$VERSION \
     org.label-schema.schema-version="1.0"
 
-RUN apk --update add \
+RUN apk --update add --no-cache \
    git-crypt \
    gnupg \
    && rm -rf /var/cache/apk/*

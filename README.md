@@ -1,3 +1,4 @@
+[![Build Status](https://github.com/emazzotta/docker-git-crypt/workflows/Docker%20Build%20&%20Push/badge.svg)](https://github.com/emazzotta/docker-git-crypt/actions)
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat)](https://emanuelemazzotta.com/mit-license)
 
 # Docker Git-Crypt

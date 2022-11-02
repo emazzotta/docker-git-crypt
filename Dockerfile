@@ -20,4 +20,7 @@ RUN apk --update add --no-cache \
    gnupg \
    && rm -rf /var/cache/apk/*
 
-ENTRYPOINT ["git-crypt"]
+WORKDIR /src
+COPY entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
